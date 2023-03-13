@@ -29,7 +29,7 @@ public class SignUpActivity extends  HTTP{
         page ="signup.php";
         setContentView(R.layout.activity_sign_up);
         first_nameEditText=findViewById(R.id.first_name);
-        family_nameEditText=findViewById(R.id.family_name);   
+        family_nameEditText=findViewById(R.id.family_name);
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         ageEditText = findViewById(R.id.age);
@@ -39,12 +39,12 @@ public class SignUpActivity extends  HTTP{
             @Override
             public void onClick(View view) {
                 String first_name=first_nameEditText.getText().toString();
-                String family_name=family_name.getText().toString();
+                String family_name=family_nameEditText.getText().toString();
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String age = ageEditText.getText().toString();
                 String address = addressEditText.getText().toString();
-                CONNECT(email,password,age,address);
+                CONNECT(email,password,age,address,first_name,family_name);
             }
         });
     }
